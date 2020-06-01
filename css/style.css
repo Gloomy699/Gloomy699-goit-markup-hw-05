@@ -131,6 +131,9 @@ img {
   font-size: 14px;
   line-height: 1.14;
 }
+.page-header .link:hover {
+  color: var(--accent-color);
+}
 
 .page-header .link::after {
   content: "";
@@ -149,9 +152,6 @@ img {
 .page-header .link:hover::after {
   opacity: 1;
 }
-/* .page-header .link:active::after {
-  opacity: 1;
-} */
 
 .main-nav .item:not(:last-child) {
   margin-right: 52px;
@@ -401,6 +401,7 @@ img {
 .page-team .link:hover {
   background-color: var(--accent-color);
   color: var(--white-color);
+  transition: 500ms;
 }
 .icon-link {
   fill: currentColor;
@@ -430,6 +431,7 @@ img {
 .page-clients .link-company:hover {
   border-color: solid var(--accent-color);
   color: var(--accent-color);
+  transition: 300ms;
 }
 
 .icon-company {
@@ -521,6 +523,7 @@ img {
 .footer-page .link:hover,
 .footer-page .link:focus {
   background-color: var(--accent-color);
+  transition: 500ms;
 }
 
 /* оформляет подписку */
@@ -617,6 +620,7 @@ img {
   border-radius: 4px;
   color: var(--white-color);
   background-color: var(--accent-color);
+  transition: 150ms;
 }
 
 /* оформляет примеры работ */
