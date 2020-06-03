@@ -131,11 +131,11 @@ img {
   font-size: 14px;
   line-height: 1.14;
 }
-.page-header .link:hover {
+.link.current {
   color: var(--accent-color);
 }
 
-.page-header .link::after {
+.link.current::after {
   content: "";
   position: absolute;
   opacity: 0;
@@ -144,13 +144,16 @@ img {
   cursor: pointer;
   width: 100%;
   height: 4px;
+
   background-color: var(--accent-color);
   background-size: auto;
   border-radius: 2px;
 }
 
-.page-header .link:hover::after {
+.link.current:after {
   opacity: 1;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-nav .item:not(:last-child) {
@@ -188,7 +191,8 @@ img {
 .page-header .contact:hover,
 .page-header .contact:focus {
   color: var(--accent-color);
-  transition: 500ms;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* оформлет основной банер (фон добавлен чтоб было видно слова белого цвета) */
@@ -401,7 +405,8 @@ img {
 .page-team .link:hover {
   background-color: var(--accent-color);
   color: var(--white-color);
-  transition: 500ms;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-link {
   fill: currentColor;
@@ -431,7 +436,8 @@ img {
 .page-clients .link-company:hover {
   border-color: solid var(--accent-color);
   color: var(--accent-color);
-  transition: 300ms;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-company {
@@ -523,7 +529,8 @@ img {
 .footer-page .link:hover,
 .footer-page .link:focus {
   background-color: var(--accent-color);
-  transition: 500ms;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* оформляет подписку */
@@ -620,7 +627,8 @@ img {
   border-radius: 4px;
   color: var(--white-color);
   background-color: var(--accent-color);
-  transition: 150ms;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* оформляет примеры работ */
@@ -712,7 +720,9 @@ img {
   line-height: 1.56;
   letter-spacing: 0.03em;
 }
+
 .page-portfolio .item:hover .text {
-  transition: 300ms;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 1;
 }
