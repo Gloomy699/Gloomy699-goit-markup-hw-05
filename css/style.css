@@ -552,8 +552,9 @@ img {
 }
 .subscription .button {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+
   font-weight: 900;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -561,18 +562,61 @@ img {
   padding-right: 28px;
 
   overflow: hidden;
+  position: relative;
 }
 
 /* тут переход тоже для практики */
+
+@keyframes fly-icon {
+  0% {
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+  }
+
+  25% {
+    top: 0;
+    right: 0;
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    top: 0;
+    right: 0;
+    transform: translateY(0) rotate(180deg);
+  }
+
+  75% {
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  100% {
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
 .icon-send {
-  margin-left: 10px;
-  transform: translate(0px, 0px);
-  transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  right: 18px;
+  /* margin-left: 10px; */
+  top: 50%;
+  transform: translatey(-50%);
+
+  /* transform: translate(0px, 0px);
+  transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .subscription .button:hover .icon-send,
 .subscription .button:focus .icon-send {
-  transform: translate(50px, -25px);
+  animation-name: fly-icon;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* transform: translate(50px, -25px); */
 }
 
 .dev-team {
