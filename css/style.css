@@ -5,6 +5,7 @@
   --white-color: #ffffff;
   --accent-color: #2196f3;
   --background-color-dark-grey: rgba(47, 48, 58, 0.8);
+  --time-deploy: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*основной цвет текста #212121*/
@@ -176,7 +177,7 @@ img {
   font-size: 14px;
   line-height: 1.14px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--time-deploy);
 }
 
 .icon-contact {
@@ -399,8 +400,8 @@ img {
   color: var(--primary-icon-color);
 
   transform: rotateZ(0deg);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--time-deploy), color 250ms var(--time-deploy),
+    transform 1250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .page-team .link:hover,
 .page-team .link:focus {
@@ -408,7 +409,7 @@ img {
   color: var(--white-color);
 
   /* для красоты ради практики */
-  transform: rotateZ(360deg) ;
+  transform: rotateZ(360deg);
 }
 
 .icon-link {
@@ -436,8 +437,8 @@ img {
   color: var(--primary-icon-color);
 
   transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms var(--time-deploy), color 250ms var(--time-deploy),
+    transform 750ms cubic-bezier(0.95, 0.05, 0.795, 0.435);
 }
 
 .page-clients .link-company:hover,
@@ -534,7 +535,7 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--white-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--time-deploy);
 }
 
 .footer-page .link:hover,
@@ -616,7 +617,7 @@ img {
 .subscription .button:focus .icon-send {
   animation-name: fly-icon;
   animation-duration: 2s;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-timing-function: var(--time-deploy);
 
   /* transform: translate(50px, -25px); */
 }
@@ -681,7 +682,7 @@ img {
   border-radius: 4px;
   cursor: pointer;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--time-deploy), background-color 250ms var(--time-deploy), box-shadow 250ms var(--time-deploy);
 }
 .filter-list .item + .item {
   margin-left: 8px;
@@ -790,7 +791,7 @@ img {
   letter-spacing: 0.03em;
 
   transform: translateY(294px);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms var(--time-deploy);
 }
 
 .page-portfolio .item:hover .text,
