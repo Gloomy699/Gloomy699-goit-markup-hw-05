@@ -176,13 +176,14 @@ img {
   font-size: 14px;
   line-height: 1.14px;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-contact {
   fill: currentColor;
   margin-right: 10px;
   padding-top: 2px;
+
 }
 
 .page-header .contact:hover,
@@ -398,7 +399,7 @@ img {
   color: var(--primary-icon-color);
 
   transform: rotateZ(0deg);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .page-team .link:hover,
@@ -407,7 +408,7 @@ img {
   color: var(--white-color);
 
   /* для красоты ради практики */
-  transform: rotateZ(360deg);
+  transform: rotateZ(360deg) ;
 }
 
 .icon-link {
@@ -435,7 +436,7 @@ img {
   color: var(--primary-icon-color);
 
   transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -533,7 +534,7 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--white-color);
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-page .link:hover,
@@ -547,6 +548,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 
   color: var(--white-color);
 }
@@ -678,6 +680,8 @@ img {
   border: 0;
   border-radius: 4px;
   cursor: pointer;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-list .item + .item {
   margin-left: 8px;
@@ -690,8 +694,6 @@ img {
   border-radius: 4px;
   color: var(--white-color);
   background-color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* оформляет примеры работ */
@@ -769,8 +771,7 @@ img {
 .text {
   position: absolute;
   top: 0;
-  opacity: 0;
-
+  
   padding: 63px 24px 63px 24px;
   align-items: center;
   width: 100%;
@@ -794,6 +795,5 @@ img {
 
 .page-portfolio .item:hover .text,
 .page-portfolio .item:focus .text {
-  opacity: 1;
   transform: translateY(0px);
 }
